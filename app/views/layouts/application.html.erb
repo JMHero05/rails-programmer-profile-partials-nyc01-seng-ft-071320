@@ -8,19 +8,13 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
+  <div class="container">
 
+    <%= render 'layouts/navbar' %>
 
-<div class="container">
+    <%= yield %>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-brand">
-      Programmers We L<span class="glyphicon glyphicon-heart"></span>ve
-    </div>
-  </nav>
-
-  <%= yield %>
-
-</div>
+  </div>
 
 </body>
 </html>
